@@ -11,3 +11,6 @@ Any help in improving Auther is greatly appreciated.👋
   
 ### Open Source Initiative  
    <img src="https://opensource.org/files/osi_keyhole_300X300_90ppi_0.png" height="40" width="40">
+  
+### Warning  
+Auther is currently in the development stage and may contain security vulnerabilities! Please report any such bugs/vulnerabilities by opening an [Issue](https://github.com/Arduino3128/Auther/issues) on Github.🛡️
