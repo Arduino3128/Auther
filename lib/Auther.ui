@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Auther</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../assets/images/Logo.png</normaloff>../assets/images/Logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:transparent;
+border:1px soild;
+border-radius:10px;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget{
+border:1px soild;
+border-radius:10px;
+background-color:transparent;
+}</string>
+   </property>
+   <widget class="QWidget" name="authWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>800</width>
+      <height>850</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget{
+background-color:rgb(21, 32, 43);
+border:0px;
+border-top-left-radius:0px;
+border-top-right-radius:0px;
+}</string>
+    </property>
+    <widget class="QTableWidget" name="authTable">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
+       <width>800</width>
+       <height>721</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget{
+margin:5px;
+
+border:1px solid;
+border-color: rgb(136, 153, 166);
+border-radius:10px;
+color: rgb(189, 189, 189);
+font: 12pt &quot;Quicksand&quot;;
+padding-left:4px;
+padding-top:2px;
+}
+QTableWidget::item{ 
+selection-background-color:rgb(49, 49, 49);
+color: rgb(189, 189, 189);
+border:1px solid transparent;
+border-radius:7px;
+border-bottom-color:rgb(57, 57, 57);
+margin-top:5px;
+margin-right:5px;
+padding:8px;
+}
+QTableWidget::item:hover{
+ background-color:rgb(34, 48, 60);
+color: rgb(189, 189, 189);
+}
+QMenu{
+border: 1px solid black;
+color:rgb(189, 189, 189);
+	background-color: rgb(34, 48, 60);
+}
+QMenu::item:hover{
+background-color:rgb(46, 69, 93);
+color:rgb(200, 200, 200);
+}
+QMenu::item:selected{
+background-color:rgb(46, 69, 93);
+color:rgb(200, 200, 200);
+}
+
+QScrollBar{
+}
+ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+ {
+     background: none;
+ }
+ QScrollBar:vertical {
+	border:1px transparent;
+    background:rgb(52, 59, 72);
+    margin: 10px 5px 10px 1px;
+	border-radius:5px;
+ }
+
+QScrollBar::add-line:vertical{
+      border: none;
+      background: none;
+}
+
+QScrollBar::sub-line:vertical {
+      border: none;
+      background: none;
+}
+QScrollBar::handle:vertical {
+	border:1px solid;
+	border-color:rgb(105, 180, 255);
+    background:rgb(105, 180, 255);
+	border-radius: 5px;
+ }</string>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustToContents</enum>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="tabKeyNavigation">
+      <bool>false</bool>
+     </property>
+     <property name="showDropIndicator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="dragEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="dragDropOverwriteMode">
+      <bool>false</bool>
+     </property>
+     <property name="dragDropMode">
+      <enum>QAbstractItemView::NoDragDrop</enum>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::MoveAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>false</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="cornerButtonEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="columnCount">
+      <number>1</number>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>49</number>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>766</number>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>110</number>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>R1</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>C1</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string>Hello</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="addButton">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>720</y>
+       <width>80</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+border-radius:40px;
+}
+QPushButton:hover{
+background-color:rgba(136, 153, 166,200);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../assets/images/New.png</normaloff>../assets/images/New.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>70</width>
+       <height>70</height>
+      </size>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QFrame" name="timerBar">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>15</y>
+       <width>90</width>
+       <height>90</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:90, stop:0.749 rgba(0, 168, 255, 201), stop:0.75 rgba(255, 255, 255, 0));
+border-width: 0;
+border-style: solid;
+border-radius:45;
+border-color: rgb(0,0,0);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <widget class="QLabel" name="timerLabel">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:transparent;
+font: 12pt &quot;Ubuntu&quot;;
+color:rgb(200,200,200);</string>
+      </property>
+      <property name="text">
+       <string>30</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="expireLabel">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>351</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;Quicksand&quot;;
+color:rgb(189, 189, 189);
+background-color:transparent;</string>
+     </property>
+     <property name="text">
+      <string>Auth codes will change after:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="logoLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>111</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../assets/images/Logo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QWidget" name="editWidget" native="true">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>50</y>
+       <width>121</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="exportButton">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>41</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+border-radius:5px;
+}
+QPushButton:hover{
+background-color:rgba(136, 153, 166,200);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../assets/images/Export.png</normaloff>../assets/images/Export.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>38</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>41</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+border-radius:5px;
+}
+QPushButton:hover{
+background-color:rgba(136, 153, 166,200);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../assets/images/Delete.png</normaloff>../assets/images/Delete.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>38</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <zorder>editWidget</zorder>
+    <zorder>authTable</zorder>
+    <zorder>timerBar</zorder>
+    <zorder>expireLabel</zorder>
+    <zorder>logoLabel</zorder>
+    <zorder>addButton</zorder>
+   </widget>
+   <widget class="QWidget" name="topBar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(34,48,60);
+border:0px solid;
+border-radius:10px;
+border-bottom-left-radius:0px;
+border-bottom-right-radius:0px;</string>
+    </property>
+    <widget class="QPushButton" name="exitButton">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>15</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>Quit Application</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:rgb(170, 0, 0);
+border:0px solid;
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(255, 0, 0);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgb(170, 0, 0);
+border:0px solid;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mainLabel">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>5</y>
+       <width>291</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Quicksand</family>
+       <pointsize>15</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel{
+font: 15pt &quot;Quicksand&quot;;
+color:rgb(189, 189, 189);
+}
+QLabel::hover{
+border-width:1px;
+border-style:solid;
+border-radius:5px;
+border-color:rgb(163, 163, 163);
+}</string>
+     </property>
+     <property name="text">
+      <string>  Auther - 2FA Manager  </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="minimizeButton">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>15</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>Minimize Application</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:rgb(170, 170, 0);
+border:0px solid;
+border-radius:10px;
+}
+QPushButton:hover{
+background-color:rgb(255, 255, 0);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgb(170, 170, 0);
+border:0px solid;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="restoreButton">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>15</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>Restore Application</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:rgb(0, 170, 0);
+border:0px solid;
+border-radius:10px;
+}
+QPushButton:hover{
+background-color: rgb(0, 255, 0);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgb(0, 170, 0);
+border:0px solid;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="infoButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>15</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="whatsThis">
+      <string>Application Info</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:rgb(0, 0, 170);
+border:0px solid;
+border-radius:10px;
+}
+QPushButton:hover{
+background-color:rgb(0, 0, 255);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgb(0, 0, 170);
+border:0px solid;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="addAuthWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>800</width>
+      <height>850</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(21, 32, 43);
+border:0px;
+border-top-left-radius:0px;
+border-top-right-radius:0px;</string>
+    </property>
+    <widget class="QWidget" name="dropURL" native="true">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>700</width>
+       <height>781</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="imageDropper">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>540</width>
+        <height>520</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color:rgb(34, 48, 60);
+border-width:0;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+padding-bottom:20;
+}
+QLabel::hover{
+background-color:rgb(44, 58, 70);
+border-width:1;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../assets/images/DND.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="URLEdit">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>600</y>
+        <width>540</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color:rgb(34, 48, 60);
+border:1px soild;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+padding-left:10px;
+font: 12pt &quot;Quicksand&quot;;
+color:rgb(189, 189, 189);
+}
+QLineEdit::hover{
+background-color:rgb(44, 58, 70);
+border-width:1;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+}</string>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Or paste the URL</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="verifyFAButton">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>690</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+border-radius:40px;
+}
+QPushButton:hover{
+background-color:rgba(136, 153, 166,200);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../assets/images/Next.png</normaloff>../assets/images/Next.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="addAuthLabel">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>0</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Quicksand</family>
+        <pointsize>15</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 15pt &quot;Quicksand&quot;;
+color:rgb(189, 189, 189);
+}
+QLabel::hover{
+border-width:1px;
+border-style:solid;
+border-radius:5px;
+border-color:rgb(163, 163, 163);
+}</string>
+      </property>
+      <property name="text">
+       <string>  Add Auth URL  </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="verifyOTP" native="true">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>700</width>
+       <height>781</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="authVerifyLabel">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>540</width>
+        <height>520</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color:rgb(34, 48, 60);
+border-width:0;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+}
+QLabel::hover{
+background-color:rgb(44, 58, 70);
+border-width:1;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../assets/images/BeepBoop.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="margin">
+       <number>-29</number>
+      </property>
+      <property name="indent">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="authEdit">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>600</y>
+        <width>540</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color:rgb(34, 48, 60);
+border:1px soild;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+padding-left:10px;
+font: 12pt &quot;Quicksand&quot;;
+color:rgb(189, 189, 189);
+}
+QLineEdit::hover{
+background-color:rgb(44, 58, 70);
+border-width:1;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Enter 6-digit authentication code</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="verifyOTPButton">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>690</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+border-radius:40px;
+}
+QPushButton:hover{
+background-color:rgba(136, 153, 166,200);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../assets/images/Verify.png</normaloff>../assets/images/Verify.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="verifyOTPLabel">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>0</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Quicksand</family>
+        <pointsize>15</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 15pt &quot;Quicksand&quot;;
+color:rgb(189, 189, 189);
+}
+QLabel::hover{
+border-width:1px;
+border-style:solid;
+border-radius:5px;
+border-color:rgb(163, 163, 163);
+}</string>
+      </property>
+      <property name="text">
+       <string>  Verify OTP  </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="cancelFAButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>720</y>
+       <width>80</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+border-radius:40px;
+}
+QPushButton:hover{
+background-color:rgba(136, 153, 166,200);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../assets/images/Back.png</normaloff>../assets/images/Back.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>70</width>
+       <height>70</height>
+      </size>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <zorder>verifyOTP</zorder>
+    <zorder>dropURL</zorder>
+    <zorder>cancelFAButton</zorder>
+   </widget>
+   <widget class="QWidget" name="exportAuthWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>800</width>
+      <height>850</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(21, 32, 43);
+border:0px;
+border-top-left-radius:0px;
+border-top-right-radius:0px;</string>
+    </property>
+    <widget class="QWidget" name="exportOTP" native="true">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>700</width>
+       <height>781</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="exportAuthImg">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>50</y>
+        <width>540</width>
+        <height>520</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+background-color:rgb(34, 48, 60);
+border-width:0;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+}
+QLabel::hover{
+background-color:rgb(44, 58, 70);
+border-width:1;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../assets/images/ExportBG.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="margin">
+       <number>-29</number>
+      </property>
+      <property name="indent">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="exportAuthText">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>600</y>
+        <width>540</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit{
+background-color:rgb(34, 48, 60);
+border:1px soild;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+padding-left:10px;
+font: 12pt &quot;Quicksand&quot;;
+color:rgb(189, 189, 189);
+}
+QLineEdit::hover{
+background-color:rgb(44, 58, 70);
+border-width:1;
+border-style:solid;
+border-color:rgb(136, 153, 166);
+border-radius:10px;
+}</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Your Auth URL should appear here.</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="exportAuthLabel">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>0</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Quicksand</family>
+        <pointsize>15</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+font: 15pt &quot;Quicksand&quot;;
+color:rgb(189, 189, 189);
+}
+QLabel::hover{
+border-width:1px;
+border-style:solid;
+border-radius:5px;
+border-color:rgb(163, 163, 163);
+}</string>
+      </property>
+      <property name="text">
+       <string>Export Auth URL</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="cancelExportButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>720</y>
+       <width>80</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+border-radius:40px;
+}
+QPushButton:hover{
+background-color:rgba(136, 153, 166,200);
+/*border:1px solid;
+border-color:rgb(56, 56, 56);*/
+
+}
+QPushButton:pressed{
+background-color:rgba(136, 153, 166,120);
+border:0px solid;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../assets/images/Back.png</normaloff>../assets/images/Back.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>70</width>
+       <height>70</height>
+      </size>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <zorder>exportAuthWidget</zorder>
+   <zorder>addAuthWidget</zorder>
+   <zorder>topBar</zorder>
+   <zorder>authWidget</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
