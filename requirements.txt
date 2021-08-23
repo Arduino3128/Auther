@@ -1,0 +1,9 @@
+pyqt5
+pyqt5-tools
+pyperclip
+keyring
+pyotp
+qrcode
+pyzbar
+pillow
+pycryptodome
