@@ -2,11 +2,15 @@
 Auther is an Open Source 2FA or TFA code manager.
 
 ## Why Auther?  
-* Open Source: No sneaky collection of data.🚫  
+* Open Source: No sneaky data collection.🚫  
 * Military Grade Encryption: Data encryption using AES-256 and random key generation.🔐  
 * Easy to use: Simple UI. 🖥️
   
-### Colaboration  
+### Gallery  
+<img src="https://raw.githubusercontent.com/Arduino3128/Auther/gh-pages/images/Auther1.png" width="400" height="450">      <img src="https://raw.githubusercontent.com/Arduino3128/Auther/gh-pages/images/Auther2.png" width="400" height="450">    
+   
+   
+### Collaboration  
 Any help in improving Auther is greatly appreciated.👋   
   
 ### Open Source Initiative  
